@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METEO</title>
+    <link rel="icon" href="meteo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <input type="text" spellcheck="false" id="input" placeholder="Please enter city...">
+        </div>
+
+        <div id="when-where">
+            <p id="city">Samara, Ru</p>
+            <p id="date"></p>
+        </div>
+
+        <div id="now">
+            <p id="temperature">-5°</p>
+            <p id="feelsLike">Feels like: -8°</p>
+            <p id="conditions">Clouds</p>
+            <p id="variation">Min: -2° Max: -10°</p>
+            <p id="sunrise"></p>
+            <p id="sunset"></p>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
