@@ -5,13 +5,22 @@ const api = {
     key: "c0f84b5f5f1575a1f81e3c7340ce6ede"
 }
 
+//Получаем ip пользователя
+async function getCity() {
+    const resOne = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=bec5860670a94ee89de5fafb0edc25b2');
+    const resTwo = await resOne.json();
+    getInfo(resTwo.city)
+}
+
+getCity()
+
 const input = document.querySelector('#input');
 input.addEventListener("keypress", enter);
 
 //Только при нажатии на энтер будет работать функционал
 function enter(e) {
     if (e.keyCode === 13) 
-    getInfo(input.value);
+    getInfo(input.value.trim());
 }
 
 //Асинхронная ф-ия - получаем доступ с API погоды
